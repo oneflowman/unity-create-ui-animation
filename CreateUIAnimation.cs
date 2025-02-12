@@ -5,7 +5,7 @@ using System.IO;
 
 public class CreateUIAnimation : Editor
 {
-    [MenuItem("Assets/Create/Animation/Animation (Image)", false, 200)]
+    [MenuItem("Assets/Create/Animation/Animation (Image)", false, 400)]
     private static void CreateUIAnimationClip()
     {
         // Get the selected sprites
@@ -88,10 +88,4 @@ public class CreateUIAnimation : Editor
         Debug.Log("UI Animation created at: " + animPath);
     }
 
-    // Validate when the menu item should appear
-    [MenuItem("Assets/Create/Animation/Animation (Image)", false)]
-    private static bool ValidateCreateUIAnimationClip()
-    {
-        return Selection.objects.Length > 0 && Selection.objects[0] is Sprite;
-    }
 }
